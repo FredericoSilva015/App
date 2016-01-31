@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Solar System (No WebServices)";
+}
+
+
+
+<h2>Solar System (No WebServices)</h2>
+
+<div class="jumbotron">
+    <h2>Solar System (No WebServices)</h2>
+
+    <img class="img-responsive" id="progress" src="~/Content/Image/solar-system.jpg" alt="Image" />
+    
+    @using (Html.BeginForm("planet", "Details", FormMethod.Post))
+    {
+
+        <button type="submit" name="planetName" value="1">Mercury</button>
+                <button type="submit" name="planetName" value="2">Venus</button>
+                <button type="submit" name="planetName" value="3">Earth</button>
+                <button type="submit" name="planetName" value="4">Mars</button>
+                <button type="submit" name="planetName" value="5">Jupiter</button>
+                <button type="submit" name="planetName" value="6">Saturn</button>
+                <button type="submit" name="planetName" value="7">Uranus</button>
+                <button type="submit" name="planetName" value="8">Neptune</button>
+                <button type="submit" name="planetName" value="9">Pluto</button>
+    }
+    
+</div>
+

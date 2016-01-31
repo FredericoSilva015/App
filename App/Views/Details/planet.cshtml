@@ -1,0 +1,65 @@
+﻿@model App.Models.Details
+    @{
+        ViewBag.Title = @Html.DisplayFor(model => model.name);
+    }
+
+
+
+<div class="jumbotron">
+    <h2>@Html.DisplayFor(model => model.name)</h2>
+    <img class="img-responsive" style="max-width:300px;max-height:300px;" src="~/Content/Image/@(Html.DisplayFor(model => model.name)).jpg" />
+    <dl>
+        <dt>
+            Distance from the Sun
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.distanceFromSun)
+        </dd>
+        <dt>
+            Mass
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.mass)
+        </dd>
+        <dt>
+            Density
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.density)
+        </dd>
+        <dt>
+            Diameter
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.diameter)
+        </dd>
+        <dt>
+            Orbit time
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.orbit)
+        </dd>
+        <dt>
+            Gravity
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.gravity)
+        </dd>
+    </dl>   
+     
+
+     
+    @using (Html.BeginForm("planet", "Details", FormMethod.Post))
+    {
+
+        <button type="submit" name="planetName" value="1">Mercury</button>
+        <button type="submit" name="planetName" value="2">Venus</button>
+                <button type="submit" name="planetName" value="3">Earth</button>
+                <button type="submit" name="planetName" value="4">Mars</button>
+                <button type="submit" name="planetName" value="5">Jupiter</button>
+                <button type="submit" name="planetName" value="6">Saturn</button>
+                <button type="submit" name="planetName" value="7">Uranus</button>
+                <button type="submit" name="planetName" value="8">Neptune</button>
+                <button type="submit" name="planetName" value="9">Pluto</button>
+    }
+</div>
